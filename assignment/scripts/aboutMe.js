@@ -10,10 +10,10 @@ console.log('My name is '+ fullname+ 'and I think', luckyNumber+ ' is a winner.'
 let adventurous = true;
 
 let food = 'BBQ ribs';
-let pets = 6;
+const pets = 5; // my correction to making this a constant
 let friendsPets = 8;
 // pets = pets+2 made this a comment to test question 16
-let allowedPets = 5
+let allowedPets = 5;
 
 console.log(pets);
 if (adventurous) {
@@ -30,20 +30,26 @@ if(luckyNumber===2 && adventurous===true){
 else{
     console.log('Lets just not');
 }
-if(allowedPets>=pets){
-    console.log('I can have more pets!')
-}
-if(allowedPets===pets){
-    console.log('I have enough pets')
-}
-if(allowedPets<=pets){
-    console.log('Oh no, I have too many pets!')
-}
+
+
+
+
 // 15 - Write a conditional that console logs "I can have more pets!" 
 //if the value of `pets` is less than the value of `allowedPets`,
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
+
+if(allowedPets>pets){
+    console.log('I can have more pets!')
+}
+else if(allowedPets==pets){ //correction to use correct == 
+    console.log('I have enough pets')
+}
+else if (allowedPets<pets){
+    console.log('Oh no, I have too many pets!')
+}
+
 
 // STRETCH GOALS:
 
@@ -62,7 +68,7 @@ if(pets <=friendsPets){
 else if(pets>=friendsPets){
     mostPets = pets ;
 }
-else if(pets===friendsPets){
+else if(pets==friendsPets){
     mostPets = pets;
     console.log('we both have',mostPets,'pets');
 }
